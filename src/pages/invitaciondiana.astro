@@ -1,0 +1,93 @@
+---
+import wave from "../images/wave-rose.svg";
+import disneyWhite from "../images/disney-white.svg";
+import disneyBlue from "../images/disney-logo.svg";
+import locationArrow from "../images/location-arrow.svg";
+import iconWhatsapp from "../images/icon-whatsapp.svg";
+import circle from "../images/circle.svg";
+import circleTwo from "../images/circle-2.svg";
+import circleThree from "../images/circle-3.svg";
+import ogImage from "../images/og-image.png";
+import rapunzelImage from "../images/rapunzel-image.png";
+---
+
+<style define:vars={{ shapeBackgroundImage: `url("${wave.src}")`}}>
+    .ola{
+        background-image: var(--shapeBackgroundImage);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20vh;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Diana</title>
+    <meta name="description" content="¡Ha llegado el momento de abrir las puertas de la magia y la diversión! te invito a mi cumpleaños 30"/> 
+    <meta name="og:image" content={ogImage.src}/>
+</head>
+<body>
+<div class="hidden sm:flex sm:justify-center sm:items-center sm:flex-col sm:h-screen sm:bg-gradient-to-b from-[#2D3F91] to-[#12163D]">
+    <img src={disneyWhite.src} alt="">
+    <h2 class="text-center font-regular text-5xl text-white lg:mx-72">Esta invitación sólo esta disponible para dispositivos móviles</h2>
+</div>
+<div class="relative sm:hidden">
+    <div class="bg-gradient-to-b from-[#CB82A8] to-[#C89BAB]">
+        <div class="bg-white h-[150px] rounded-b-full flex justify-center items-center">
+            <div>
+                <img class="my-auto mx-auto" src={disneyBlue.src} alt="">
+            </div>
+        </div>
+        <div class="mx-2 -mt-4 mb-8">
+            <video controls loop playsinline width="100%" height="100%" class="rounded-xl" >
+                <source src="https://pub-c6f56a3478ba4de7a25f81a088d063ba.r2.dev/disney-intro.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <h2 class="text-[#280417] font-semibold text-center">Diana Valeria</h2>
+            <h2 class="text-white font-semibold text-center">Únete a la magia de</h2>
+            <h2 class="text-white font-semibold text-center text-4xl">mi cumpleaños</h2>
+            <h2 class="text-white font-semibold text-center text-4xl">número cuatro</h2>
+            <h2 class="text-white text-center mt-8">18 de Noviembre a las 4 pm</h2>
+            <h2 class="text-white text-center mt-4 pb-4">Temática de disfraces 🥸 de tu personaje favorito <span class="font-black">Disney/infantil</span></h2>            
+        </div>
+        </div>
+    <div class="ola">
+    </div>
+</div>   
+<div class="relative sm:hidden">
+    <div class="flex flex-col items-center">
+        <a href="https://maps.google.com/?q=19.705585,-98.959488">
+            <div class="flex my-4 shadow-lg rounded-xl w-64 p-4">
+                <div>
+                <h3>Ir al salón por maps</h3>
+                <h3 class="text-xs mr-2">Salón de Fiestas de Fraccionamiento Valle del Sol 1</h3>
+                </div>
+                <img src={locationArrow.src} alt="">
+            </div>
+        </a>
+        <a href="https://wa.link/o1fmvi">
+            <div class="flex justify-between my-4 rounded-lg w-64 p-4 shadow-xl">
+                <div>
+                <h3 class="mr-2">Confirmar asistencia</h3>
+                </div>
+                <img src={iconWhatsapp.src} alt="">
+            </div>
+        </a>
+    </div>
+    <div class="my-8 mx-4">
+        <h2 class="text-center">¡Te espero!</h2>
+        <h2 class="text-center">Recuerda confirmar tu asistencia <span class="font-bold">por Whatsapp</span></h2>
+        <h2 class="text-center mt-4">Se enviará el código de acceso por WhatsApp</h2>
+    </div>
+    <img class="absolute bottom-20 left-6" src={circle.src} alt="">
+    <img class="absolute bottom-20 right-5"  src={circleTwo.src} alt="">
+    <img class="absolute top-0 right-10"  src={circleThree.src} alt="">
+</div>
+<img class="mx-auto mt-0 mb-0 w-72 items-end" src={rapunzelImage.src} alt="">
+</body>
+</html>
